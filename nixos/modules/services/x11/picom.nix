@@ -1,8 +1,25 @@
 { config, lib, options, pkgs, ... }:
 
-with lib;
-
 let
+  inherit (lib)
+    boolToString
+    concatMapStringsSep
+    concatStringsSep
+    elemAt
+    escape
+    isAttrs
+    isBool
+    literalExpression
+    mapAttrs
+    mapAttrsToList
+    mkAliasOptionModuleMD
+    mkDefault
+    mkIf
+    mkOption
+    mkRemovedOptionModule
+    types
+    warn
+    ;
 
   cfg = config.services.picom;
   opt = options.services.picom;
