@@ -13591,6 +13591,11 @@
     matrix = "@quantenzitrone:matrix.org";
     name = "quantenzitrone";
   };
+  quantumcoded = {
+    github = "QuantumCoded";
+    githubId = 21026145;
+    name = "Jeffrey";
+  };
   queezle = {
     email = "git@queezle.net";
     github = "queezle42";
