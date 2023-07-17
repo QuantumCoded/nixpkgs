@@ -101,6 +101,15 @@ in {
       '';
     };
 
+    package = mkOption {
+      type = types.package;
+      default = pkgs.picom;
+      example = literalExpression "pkgs.picom";
+      description = lib.mdDoc ''
+        Allows you to change the compositor package.
+      '';
+    };
+
     shadow = mkOption {
       type = types.bool;
       default = false;
@@ -307,7 +316,7 @@ in {
       };
     };
 
-    environment.systemPackages = [ pkgs.picom ];
+    environment.systemPackages = [ cfg.package ];
   };
 
   meta.maintainers = with lib.maintainers; [ rnhmjoj ];
